@@ -1,0 +1,42 @@
+body {
+    background-color: #121212; /* Darker background for better contrast */
+    color: #00ff00; /* Bright green text for terminal effect */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#terminal {
+    border: 1px solid #00ff00;
+    padding: 10px;
+    height: 80%; /* Increased height for the terminal */
+    overflow-y: auto;
+    background-color: #1e1e1e; /* Dark background for terminal */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
+    border-radius: 5px; /* Rounded corners */
+    position: relative;
+}
+input {
+border-radius:5px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #00ff00;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px; /* Spacing above the input */
+
+    transition: background 0.3s; /* Smooth background transition */
+}
+input:focus {
+border-radius:5px;
+    background: rgba(0, 255, 0, 0.1); /* Light green on focus */
+}
+.command-output {
+    margin: 5px 0; /* Spacing between output lines */
+}
