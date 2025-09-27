@@ -88,3 +88,31 @@
     .minimized input {
       display: none;
     }
+ 
+@media (max-width: 768px) {
+  .terminal-wrapper {
+    width: 95%;
+    height: 80vh;
+    max-width: none;
+    max-height: none;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+  }
+
+  #terminal {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .terminal-btn {
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
+  }
+}
