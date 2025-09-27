@@ -1,42 +1,90 @@
-body {
-    background-color: #121212; /* Darker background for better contrast */
-    color: #00ff00; /* Bright green text for terminal effect */
-    font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
-    font-size: 18px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-#terminal {
-    border: 1px solid #00ff00;
-    padding: 10px;
-    height: 80%; /* Increased height for the terminal */
-    overflow-y: auto;
-    background-color: #1e1e1e; /* Dark background for terminal */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
-    border-radius: 5px; /* Rounded corners */
-    position: relative;
-}
-input {
-border-radius:5px;
-    width: 100%;
-    border: none;
-    background: transparent;
-    color: #00ff00;
-    outline: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    padding: 10px;
-    margin-top: 10px; /* Spacing above the input */
-
-    transition: background 0.3s; /* Smooth background transition */
-}
-input:focus {
-border-radius:5px;
-    background: rgba(0, 255, 0, 0.1); /* Light green on focus */
-}
-.command-output {
-    margin: 5px 0; /* Spacing between output lines */
-}
+  body {
+      background-color: #121212;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .terminal-wrapper {
+      width: 800px;
+      height: 500px;
+      background: #1e1e1e;
+      border: 2px solid #00ff00;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      transition: all 0.3s ease;
+    }
+    .terminal-header {
+      background: #111;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      cursor: move;
+    }
+    .terminal-btn {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin: 0 4px;
+      display: inline-block;
+    }
+    .close { background: #ff5f56; }
+    .minimize { background: #ffbd2e; }
+    .maximize { background: #27c93f; }
+    #terminal {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 16px;
+    }
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      padding: 10px;
+      border-top: 1px solid #00ff00;
+    }
+    #secret-btn {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      background: #00ff00;
+      color: #121212;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #secret-btn:hover {
+      background: #00cc00;
+    }
+    .command-output {
+      margin: 4px 0;
+    }
+    /* Minimized dock bar */
+    .minimized {
+      width: 200px !important;
+      height: 30px !important;
+      bottom: 10px !important;
+      left: 10px !important;
+      top: auto !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .minimized #terminal,
+    .minimized input {
+      display: none;
+    }
