@@ -123,15 +123,15 @@
         return jokes[Math.floor(Math.random() * jokes.length)];
       },
       discord: () => {
-        window.open("https://discord.com", "_blank");
+        window.open("https://discord.gg/CEfhTm49jw", "_blank");
         return "Opening Discord...";
       },
       github: () => {
-        window.open("https://github.com", "_blank");
+        window.open("https://github.com/enterheadlines/js-terminal", "_blank");
         return "Opening GitHub...";
       },
       instagram: () => {
-        window.open("https://instagram.com", "_blank");
+        window.open("https://www.instagram.com/infamy__studios/#", "_blank");
         return "Opening Instagram...";
       },
     };
